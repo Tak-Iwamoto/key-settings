@@ -1,0 +1,228 @@
+{
+  "emmet.triggerExpansionOnTab": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.useLanguageServer": true,
+  "files.autoSave": "afterDelay",
+  "go.gocodeAutoBuild": true,
+  "go.gopath": "/Users/takuro/go",
+  "workbench.iconTheme": "vscode-icons",
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.hlsearch": true,
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f"],
+      "after": ["leader", "leader", "s"]
+    }
+  ],
+  "vim.easymotionMarkerBackgroundColor": "green",
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "window.zoomLevel": 3,
+  "editor.tabSize": 2,
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": "on",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+  "workbench.colorTheme": "Monokai High Contrast",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBorder": "#FFFFFF",
+    "panel.border": "#FFFFFF",
+    "panelInput.border": "#FFFFFF",
+    "activityBarBadge.background": "#616161",
+    "list.activeSelectionForeground": "#616161",
+    "list.inactiveSelectionForeground": "#616161",
+    "list.highlightForeground": "#616161",
+    "scrollbarSlider.activeBackground": "#61616150",
+    "editorSuggestWidget.highlightForeground": "#616161",
+    "textLink.foreground": "#616161",
+    "progressBar.background": "#616161",
+    "pickerGroup.foreground": "#616161",
+    "tab.activeBorder": "#616161",
+    "notificationLink.foreground": "#616161",
+    "editorWidget.resizeBorder": "#616161",
+    "editorWidget.border": "#616161",
+    "settings.modifiedItemIndicator": "#616161",
+    "settings.headerForeground": "#616161",
+    "panelTitle.activeBorder": "#616161",
+    "breadcrumb.activeSelectionForeground": "#616161",
+    "menu.selectionForeground": "#616161",
+    "menubar.selectionForeground": "#616161",
+    "editor.findMatchBorder": "#616161",
+    "selection.background": "#61616140"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.rendererType": "dom",
+  "prettier.trailingComma": "es5",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/takuro/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "C_Cpp.updateChannel": "Insiders",
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded"
+  },
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true,
+    "rename": true,
+    "goToDefinition": true,
+    "hover": true,
+    "signatureHelp": true,
+    "goToTypeDefinition": true,
+    "goToImplementation": true,
+    "documentSymbols": true,
+    "workspaceSymbols": true,
+    "findReferences": true,
+    "diagnostics": true
+  },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    // Optional: Disable snippets, as they conflict with completion ranking.
+    "editor.snippetSuggestions": "none"
+  },
+  "[go.mod]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby"
+  },
+  "workbench.activityBar.visible": true,
+  "beautify.language": {
+    "css": ["css", "less", "scss"],
+    "html": ["htm", "html", "erb"]
+  },
+  "[erb]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "java.semanticHighlighting.enabled": true,
+  "solargraph.externalServer": {
+    "host": "localhost",
+    "port": 8091
+  },
+  "solargraph.transport": "external",
+  "solargraph.logLevel": "debug",
+  "solargraph.diagnostics": true,
+  "solargraph.hover": false,
+  "git.autofetch": true,
+  "hediet.vscode-drawio.local-storage": {
+    ".drawio-config": {
+      "language": "",
+      "customFonts": [],
+      "libraries": "general;basic;arrows2;flowchart;er;uml;aws4;bpmn",
+      "customLibraries": ["L.scratchpad"],
+      "plugins": [],
+      "recentColors": [],
+      "formatWidth": 240,
+      "createTarget": false,
+      "pageFormat": {
+        "x": 0,
+        "y": 0,
+        "width": 827,
+        "height": 1169
+      },
+      "search": true,
+      "showStartScreen": true,
+      "gridColor": "#d0d0d0",
+      "darkGridColor": "#6e6e6e",
+      "autosave": true,
+      "resizeImages": null,
+      "openCounter": 0,
+      "version": 18,
+      "unit": 1,
+      "isRulerOn": false,
+      "ui": ""
+    }
+  },
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}
