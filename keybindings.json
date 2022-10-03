@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
   {
     "key": "shift+cmd+v shift+cmd+v",
@@ -21,12 +20,21 @@
     "when": "editorFocus && !editorReadonly"
   },
   {
-    "key": "shift+ctrl+t",
+    "key": "shift+cmd+t",
     "command": "workbench.action.terminal.new"
   },
   {
     "key": "ctrl+shift+[Equal]",
     "command": "-workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
     "key": "shift+alt+f",
@@ -39,7 +47,7 @@
     "when": "editorTextFocus && !editorHasSelection"
   },
   {
-    "key": "shift+cmd+l",
+    "key": "shift+ctrl+l",
     "command": "workbench.action.editor.changeLanguageMode"
   },
   {
@@ -49,15 +57,6 @@
   {
     "key": "cmd+`",
     "command": "workbench.action.toggleActivityBarVisibility"
-  },
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "cmd+numpad1",
-    "command": "-workbench.action.toggleSidebarVisibility",
-    "when": "!editorFocus"
   },
   {
     "key": "ctrl+;",
@@ -70,7 +69,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+h",
+    "key": "left",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
@@ -100,7 +99,7 @@
     "when": "editorFocus"
   },
   {
-    "key": "cmd+q",
+    "key": "ctrl+q",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "!editorFocus"
   },
@@ -115,7 +114,7 @@
     "when": "editorFocus"
   },
   {
-    "key": "ctrl+m",
+    "key": "ctrl+d",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
@@ -125,7 +124,7 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "alt+cmd+n",
+    "key": "ctrl+alt+n",
     "command": "code-runner.run"
   },
   {
@@ -148,29 +147,12 @@
     "when": "terminalFocus"
   },
   {
-    "key": "cmd+1",
-    "command": "-editor.action.quickFix",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "cmd+j ctrl",
-    "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "cmd+j",
-    "command": "-workbench.action.togglePanel"
-  },
-  {
     "key": "ctrl+shift+p",
     "command": "workbench.action.showCommands"
   },
   {
     "key": "shift+cmd+p",
     "command": "-workbench.action.showCommands"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "-workbench.view.search"
   },
   {
     "key": "ctrl+.",
@@ -183,11 +165,211 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+f",
+    "key": "cmd+j ctrl",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+f",
     "command": "workbench.action.findInFiles"
   },
   {
     "key": "shift+cmd+f",
     "command": "-workbench.action.findInFiles"
-  }
+  },
+  {
+    "key": "ctrl+shift+- ctrl+shift+alt+=",
+    "command": "extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "cmd+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "shift+alt+f12",
+    "command": "-references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "shift+f12",
+    "command": "-editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "Enter",
+    "command": "list.select",
+    "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "list.select",
+    "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "Enter",
+    "command": "list.toggleExpand",
+    "when": "explorerViewletFocus && explorerViewletVisible && explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "m r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "m c",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "m p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "m a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "m d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "m f",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "-editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "gitlens.diffWithWorking",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "shift+alt+.",
+    "command": "-gitlens.diffWithWorking",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "testing.runAtCursor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+; c",
+    "command": "-testing.runAtCursor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "go.test.cursor"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "shift+f4",
+    "command": "-search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "f4",
+    "command": "-search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "rust-analyzer.run"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
 ]

@@ -1,43 +1,50 @@
 {
   "emmet.triggerExpansionOnTab": true,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "explorer.confirmDragAndDrop": false,
   "workbench.startupEditor": "newUntitledFile",
   "ruby.intellisense": "rubyLocate",
+  "ruby.format": "rubocop",
   "ruby.useLanguageServer": true,
   "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "go.gocodeAutoBuild": true,
-  "go.gopath": "/Users/takuro/go",
   "workbench.iconTheme": "vscode-icons",
-  "eslint.enable": true,
-  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.tabSize": 2,
+  "workbench.tree.indent": 2,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "tailwindCSS.experimental.classRegex": [],
   "[javascript]": {
-    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vim.hlsearch": true,
-
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["f"],
       "after": ["leader", "leader", "s"]
     }
   ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
   "vim.easymotionMarkerBackgroundColor": "green",
   "vim.easymotion": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
-  "window.zoomLevel": 3,
-  "editor.tabSize": 2,
   "editor.snippetSuggestions": "top",
   "editor.tabCompletion": "on",
   "[json]": {
@@ -48,7 +55,7 @@
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true
   },
-  "workbench.colorTheme": "Monokai High Contrast",
+  "workbench.colorTheme": "Dracula",
   "workbench.colorCustomizations": {
     "editor.lineHighlightBorder": "#FFFFFF",
     "panel.border": "#FFFFFF",
@@ -78,21 +85,42 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terminal.integrated.rendererType": "dom",
   "prettier.trailingComma": "es5",
-  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/takuro/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/iwamototakurou/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "C_Cpp.updateChannel": "Insiders",
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
     "javascript": "node",
@@ -101,7 +129,7 @@
     "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "php": "php",
-    "python": "python -u",
+    "python": "python3 -u",
     "perl": "perl",
     "perl6": "perl6",
     "ruby": "ruby",
@@ -143,86 +171,73 @@
   },
   "go.useLanguageServer": true,
   "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true,
-    "rename": true,
-    "goToDefinition": true,
-    "hover": true,
-    "signatureHelp": true,
-    "goToTypeDefinition": true,
-    "goToImplementation": true,
-    "documentSymbols": true,
-    "workspaceSymbols": true,
-    "findReferences": true,
     "diagnostics": true
-  },
-  "[go]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    // Optional: Disable snippets, as they conflict with completion ranking.
-    "editor.snippetSuggestions": "none"
-  },
-  "[go.mod]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.visible": true,
-  "beautify.language": {
-    "css": ["css", "less", "scss"],
-    "html": ["htm", "html", "erb"]
-  },
-  "[erb]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "java.semanticHighlighting.enabled": true,
-  "solargraph.externalServer": {
-    "host": "localhost",
-    "port": 8091
-  },
-  "solargraph.transport": "external",
-  "solargraph.logLevel": "debug",
-  "solargraph.diagnostics": true,
-  "solargraph.hover": false,
   "git.autofetch": true,
-  "hediet.vscode-drawio.local-storage": {
-    ".drawio-config": {
-      "language": "",
-      "customFonts": [],
-      "libraries": "general;basic;arrows2;flowchart;er;uml;aws4;bpmn",
-      "customLibraries": ["L.scratchpad"],
-      "plugins": [],
-      "recentColors": [],
-      "formatWidth": 240,
-      "createTarget": false,
-      "pageFormat": {
-        "x": 0,
-        "y": 0,
-        "width": 827,
-        "height": 1169
-      },
-      "search": true,
-      "showStartScreen": true,
-      "gridColor": "#d0d0d0",
-      "darkGridColor": "#6e6e6e",
-      "autosave": true,
-      "resizeImages": null,
-      "openCounter": 0,
-      "version": 18,
-      "unit": 1,
-      "isRulerOn": false,
-      "ui": ""
-    }
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.autoSaveDelay": 300,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "hediet.vscode-drawio.theme": "Kennedy",
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "go.lintTool": "golangci-lint",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gopls": {
+    "build.experimentalWorkspaceModule": true,
+    "build.expandWorkspaceToModule": true
+  },
+  "liveshare.anonymousGuestApproval": "accept",
+  "rainbow_csv.csv_lint_detect_trailing_spaces": true,
+  "go.toolsManagement.autoUpdate": true,
+  "go.gopath": "/Users/iwamototakurou/go",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.tabSize": 4
+  },
+  "gitlens.statusBar.enabled": false,
+  "gitlens.statusBar.reduceFlicker": false,
+  "git-graph.showStatusBarItem": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "liveshare.showInStatusBar": "never",
+  "redhat.telemetry.enabled": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "rust-analyzer.completion.autoimport.enable": true,
+  "rust-analyzer.trace.extension": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "extensions.autoCheckUpdates": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "bracketPairColorizer.depreciation-notice": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.accessibilitySupport": "off",
+  "rust-analyzer.procMacro.attributes.enable": false,
+  "audioCues.lineHasError": "off",
+  "audioCues.lineHasBreakpoint": "off",
+  "audioCues.lineHasFoldedArea": "off",
+  "audioCues.lineHasInlineSuggestion": "off",
+  "audioCues.noInlayHints": "off",
+  "audioCues.onDebugBreak": "off",
+  "audioCues.volume": 0,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.mac": "/Users/iwamototakurou/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "window.zoomLevel": 1,
 }
